@@ -60,7 +60,7 @@
     <p>现在对象<code>{name: "John"}</code>变成不可达的了，因为没有引用，就无法访问到它，因此垃圾回收器会将其回收，并释放被其占用的内存。</p>
     <h4>引用计数</h4>
     <p>引用计数是一种不常用的垃圾收集算法。此算法把“对象是否不再需要”简化定义为“对象有没有其他对象引用到它”。如果没有引用指向该对象（零引用），对象将被垃圾回收机制回收。</p>
-    <p>示例：</p>
+    <p>示例：<a href="http://pythontutor.com/visualize.html#code=var%20o%20%3D%20%7B%0A%20%20a%3A%20%7B%0A%20%20%20%20b%3A%202%0A%20%20%7D%0A%7D%3B%0A%0Avar%20o2%20%3D%20o%3B%0A%0Ao%20%3D%201%3B%0A%0Avar%20oa%20%3D%20o2.a%3B%0A%0Ao2%20%3D%20%22yo%22%3B%0A%0Aoa%20%3D%20null%3B&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false">代码可视化示范</a></p>
     <pre>
       <code class="prettyprint">
         var o = {
@@ -81,7 +81,6 @@
         oa = null; // 乙现在也是零引用了，它可以被垃圾回收了
       </code>
     </pre>
-    <iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=%0Avar%20o%20%3D%20%7B%0A%20%20a%3A%20%7B%0A%20%20%20%20b%3A2%0A%20%20%7D%0A%7D%3B%0A%0A%0A%0Avar%20o2%20%3D%20o%3B%20%0A%0Ao%20%3D%201%3B%20%20%20%20%20%20%0A%0Avar%20oa%20%3D%20o2.a%3B%20%0A%0Ao2%20%3D%20%22yo%22%3B%20%0A%0Aoa%20%3D%20null%3B%20&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=6&heapPrimitives=nevernest&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false"></iframe>
     <p>引用计数的一个问题是循环引用，即对象A 有一个指针指向对象B，而对象B 也引用了对象A。比如：</p>
     <pre>
       <code class="prettyprint">
