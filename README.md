@@ -8,7 +8,9 @@
 - [三列布局](docs/css/issue-6.md)
 - [CSS优先级](docs/css/issue-7.md)
 - [隐藏元素的方式](docs/css/issue-5.md)
-***
+
+<hr>
+
 - [双飞翼布局](docs/css/issue-2.md)
 - [CSS实现三角形](docs/css/issue-1.md)
 - [CSS常见问题](docs/css/issue-1.md)
@@ -25,7 +27,9 @@
 - [防抖和节流](docs/js/issue-13.md)
 - [轮播图](docs/js/issue-14.md)
 - [跨域](docs/js/issue-15.md)
-***
+
+<hr>
+
 - [用reduce实现map](docs/js/issue-9.md)
 - [实现一个数的阶乘](docs/js/issue-7.md)
 - [模拟实现Promise.finally](docs/js/issue-19.md)
@@ -45,7 +49,9 @@
 ### Algorithm
 - [Dijkstra算法](docs/algorithm/issue-1.md)
 - [冒泡算法和快排算法](docs/algorithm/issue-2.md)
-***
+
+<hr>
+
 - [数组乱序](docs/js/issue-3.md)
 
 ### Others
