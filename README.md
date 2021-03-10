@@ -11,14 +11,11 @@
 ### JS
 - [垃圾回收机制](docs/garbage-collection.html)
 - [事件循环](docs/javascript-event-loop.html)
-- [浅拷贝和深拷贝](docs/js/issue-0.md)
 - [for...in 和 for...of 区别](docs/js/issue-4.md)
 - [浅拷贝和深拷贝](docs/js/issue-0.md)
-- [for...in 和 for...of 区别](docs/js/issue-4.md)
 - [async await](docs/js/issue-6.md)
-- [柯里化](docs/js/issue-8.md)
+- [函数柯里化](docs/js/issue-8.md)
 - [防抖和节流](docs/js/issue-13.md)
-- [轮播图](docs/js/issue-14.md)
 - [跨域](docs/js/issue-15.md)
 
 ### Vue
@@ -31,16 +28,19 @@
 - [Dijkstra算法](docs/algorithm/issue-1.md)
 - [冒泡算法和快排算法](docs/algorithm/issue-2.md)
 
-### Others
-- [Web安全](docs/js/issue-5.md)
+### Browser
 - [性能优化](docs/js/issue-12.md)
 - [回流与重绘](docs/others/issue-1.md)
 - [浏览器缓存](docs/javascript-event-loop.html)
 - [cookie和session的区别](docs/js/issue-5.md)
 - [输入URL之后发生了什么？](docs/js/issue-17.md)
 
+### Others
+- [Web安全](docs/js/issue-5.md)
+
 ### Questions
 - [数组乱序](docs/js/issue-3.md)
+- [轮播图](docs/js/issue-14.md)
 - [双飞翼布局](docs/css/issue-2.md)
 - [CSS实现三角形](docs/css/issue-1.md)
 - [CSS隐藏元素的方式](docs/css/issue-5.md)
