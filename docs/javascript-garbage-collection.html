@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>JavaScript垃圾回收机制</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\Andy\kwokonwoo.github.io\assets\css\basic.css">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  </head>
+  <body>
+    <h2>JavaScript垃圾回收机制</h2>
+    <p>不同于C和C++等语言由开发者负责跟踪内存使用，JavaScript通过<strong>自动内存管理</strong>实现内存分配和闲置资源回收。释放不再使用的变量占用的内存称为垃圾回收。无论是什么程序语言，内存的生命周期基本是一致的：首先是分配所需内存，接着使用分配到的内存（读、写），最后在不需要时将其释放。</p>
+    
+    <h3>内存分配</h3>
+    <h4>值的初始化</h4>
+    <p>定义变量时完成内存分配：</p>
+    <pre>
+      <code class="prettyprint">
+        let n = 123; // 给数值变量分配内存
 
+        function f(a){
+          return a + 1;
+        } // 给函数（可调用的对象）分配内存
+      </code>
+    </pre>
+    <h4>函数调用</h4>
+    <p>有的函数调用结果是分配对象内存：</p>
+    <pre>
+      <code class="prettyprint">
+        let d = new Date(); // 分配一个Date对象
+    
+        let e = document.createElement('div'); // 分配一个DOM元素
+      </code>
+    </pre>
+
+    <h3>垃圾回收</h3>
+    <p>主要的垃圾回收策略有标记清理和引用计数。</p>
+    <h4>标记清理</h4>
+    <p>标记清理的核心概念是可达性（Reachability），即“可达”值是那些以某种方式可访问或可用的值。它们一定存储在内存中。常见的可达值包括：</p>
+    <ul>
+      <li>当前函数的局部变量和参数；</li>
+      <li>嵌套调用时，当前调用链上所有函数的变量和参数；</li>
+      <li>全局变量；</li>
+    </ul>
+    <p>这些值被称作根（roots）。垃圾回收器将定期从根开始，找所有从根开始引用的对象，然后找这些对象引用的对象……从根开始，垃圾回收器将找到所有可以获得的对象和收集所有不能获得的对象。</p>
+    <p>示例：</p>
+    <pre>
+      <code class="prettyprint">
+        let user = {
+          name: &quot;John&quot;
+        }
+      </code>
+    </pre>
+    <p>在上例中，全局变量<code>user</code>引用了对象<code>{name: "John"}</code>。如果<code>user</code>的值被重写了，这个引用就没了：</p>
+    <pre>
+      <code class="prettyprint">
+        user = null
+      </code>
+    </pre>
+    <p>现在对象<code>{name: "John"}</code>变成不可达的了，因为没有引用，就无法访问到它，因此垃圾回收器会将其回收，并释放被其占用的内存。</p>
+    <h4>引用计数</h4>
+    <p>引用计数是一种不常用的垃圾收集算法。此算法把“对象是否不再需要”简化定义为“对象有没有其他对象引用到它”。如果没有引用指向该对象（零引用），对象将被垃圾回收机制回收。</p>
+    <p>示例：</p>
+    <pre>
+      <code class="prettyprint">
+        var o = {
+          a: {
+            b:2
+          } // 对象乙
+        }; // 对象甲
+        // 乙作为甲的属性被引用，甲被分配给变量o
+        
+        var o2 = o; // o2变量是甲的引用
+        
+        o = 1;      // 现在，甲只有一个变量o2的引用，原始引用o已经没有
+        
+        var oa = o2.a; // 变量oa引用乙
+        
+        o2 = &quot;yo&quot;; // 现在甲已经零引用了，可以回收，但是它的属性a引用的对象乙还被oa引用，无法回收
+        
+        oa = null; // 乙现在也是零引用了，它可以被垃圾回收了
+      </code>
+    </pre>
+    <iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=%0Avar%20o%20%3D%20%7B%0A%20%20a%3A%20%7B%0A%20%20%20%20b%3A2%0A%20%20%7D%0A%7D%3B%0A%0A%0A%0Avar%20o2%20%3D%20o%3B%20%0A%0Ao%20%3D%201%3B%20%20%20%20%20%20%0A%0Avar%20oa%20%3D%20o2.a%3B%20%0A%0Ao2%20%3D%20%22yo%22%3B%20%0A%0Aoa%20%3D%20null%3B%20&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=6&heapPrimitives=nevernest&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D&textReferences=false"></iframe>
+    <p>引用计数的一个问题是循环引用，即对象A 有一个指针指向对象B，而对象B 也引用了对象A。比如：</p>
+    <pre>
+      <code class="prettyprint">
+        function f(){
+          var o = {};
+          var o2 = {};
+          o.a = o2; // o 引用 o2
+          o2.a = o; // o2 引用 o
+        }
+      </code>
+    </pre>
+    <p>在这种情况下，<code>o</code>和<code>o2</code>在函数结束后还会存在，因为它们的引用数不为0。如果函数多此调用，则会导致大量内存永远无法释放。</p>
+    
+    <h3>References</h3>
+    <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Memory_Management">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Memory_Management</a></p>
+    <p><a href="https://zh.javascript.info/garbage-collection">https://zh.javascript.info/garbage-collection</a></p>
+    <p>马特·弗里斯比. JavaScript高级程序设计：第4版，P95-96.</p>
+  </body>
+</html>
