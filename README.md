@@ -1,4 +1,4 @@
-- JavaScript垃圾回收机制
+- [JavaScript垃圾回收机制](docs/javascript-garbage-collection.html)
 - JavaScript垃圾回收机制
 - JavaScript垃圾回收机制
 - JavaScript垃圾回收机制
