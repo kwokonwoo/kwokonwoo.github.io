@@ -29,7 +29,7 @@
 - [call, apply, bind](docs/js/issue-1.md)
 - [闭包](docs/js/issue-1.md)
 - [类型判断](docs/js/issue-1.md)
-- [**原型和继承**](docs/js/issue-1.md)
+- [原型和继承](docs/js/issue-1.md)
 - [隐式转换](docs/js/issue-1.md)
 - [DOM常用操作](docs/js/issue-1.md)
 - [Ajax](docs/js/issue-1.md)
