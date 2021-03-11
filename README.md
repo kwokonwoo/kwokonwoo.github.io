@@ -22,8 +22,9 @@
   - [flex box](docs/css/issue-5.md)
 
 ### JavaScript
-- [垃圾回收机制](docs/garbage-collection.html)
-- [for...in 和 for...of 区别](docs/js/issue-4.md)
+- [垃圾回收机制](docs/js/garbage-collection.html)
+- [数组遍历：for/for...in/forEach/for...of](docs/js/looping-over-arrays.html)
+- [可迭代与可枚举](docs/js/iterable-enumerable.html)
 - [浅拷贝和深拷贝](docs/js/issue-0.md)
 - [this](docs/js/issue-1.md)
 - [call, apply, bind](docs/js/issue-1.md)
@@ -32,7 +33,7 @@
 - [原型和继承](docs/js/issue-1.md)
 - [隐式转换](docs/js/issue-1.md)
 - [DOM常用操作](docs/js/issue-1.md)
-- [Ajax](docs/js/issue-1.md)
+- [AJAX](docs/js/issue-1.md)
 - [事件委托](docs/js/issue-1.md)
 - [冒泡和捕获](docs/js/issue-1.md)
 - [发布订阅模式](docs/js/issue-1.md)
