@@ -186,7 +186,8 @@
   </ul>
 </div>
 
-<h3 id="notes">Notes</h3>
+<div class="card">
+  <h3 id="notes">Notes</h3>
   <ul>
     <li><a href="docs/js/issue-2.md">实现一个从后台接口批量请求数据的异步方法request()</a></li>
   </ul>
