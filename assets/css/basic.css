@@ -17,6 +17,9 @@ a {
 
 .content ul {
 	list-style-type: circle;
+}
+
+.content .card {
 	break-inside: avoid;
 	page-break-inside: avoid;
 }
