@@ -121,3 +121,9 @@
 - [为什么0.1 + 0.2 == 0.3为false，如何解决？](docs/js/issue-16.md)
 - [写一个difference方法，用于比较两个数组](docs/js/issue-1.md)
 - [实现一个从后台接口批量请求数据的异步方法request()](docs/js/issue-2.md)
+
+### Translation
+- [实现一个从后台接口批量请求数据的异步方法request()](docs/js/issue-2.md)
+
+### Notes
+- [实现一个从后台接口批量请求数据的异步方法request()](docs/js/issue-2.md)
