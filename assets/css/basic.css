@@ -7,6 +7,16 @@ a {
 	text-decoration: none;
 }
 
+.content {
+	column-count: 2;
+}
+
+.content h3 {
+	margin: 0;
+}
+
 .content ul {
 	list-style-type: circle;
+	break-inside: avoid;
+	page-break-inside: avoid;
 }
