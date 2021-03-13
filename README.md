@@ -9,10 +9,10 @@
 <div class="card">
   <h3 id="css">CSS</h3>
   <ul>
-    <li><a href="docs/css/issue-1.md">盒子模型</a></li>
-    <li><a href="docs/css/issue-1.md">CSS实现三角形</a></li>
     <li><a href="docs/css/issue-2.md">BFC</a></li>
     <li><a href="docs/css/issue-3.md">继承性</a></li>
+    <li><a href="docs/css/issue-1.md">盒子模型</a></li>
+    <li><a href="docs/css/issue-1.md">CSS实现三角形</a></li>
     <li><a href="docs/css/issue-4.md">选择器优先级</a></li>
     <li><a href="docs/css/issue-5.md">伪类和伪元素</a></li>
     <li><a href="docs/css/issue-6.md">z-index</a></li>
@@ -23,7 +23,6 @@
     <li><a href="docs/css/issue-5.md">隐藏页面元素</a></li>
     <li><a href="docs/css/issue-5.md">移动端适配</a></li>
     <li><a href="docs/css/issue-5.md">响应式布局</a></li>
-    <li><a href="docs/css/issue-6.md">em, vw</a></li>
     <li><a href="docs/css/issue-5.md">CSS 3新特性</a>
       <ul>
         <li><a href="docs/css/issue-5.md">动画</a></li>
@@ -37,7 +36,7 @@
 <div class="card">
   <h3 id="javascript">JavaScript</h3>
   <ul>
-    <li><a href="docs/js/issue-14.md">轮播图</a></li>
+    <li><a href="docs/js/issue-14.md">轮播图实现</a></li>
     <li><a href="/docs/js/garbage-collection.html">垃圾回收机制</a></li>
     <li><a href="/docs/js/looping-over-arrays.html">数组遍历：for/for…in/forEach/for…of</a></li>
     <li><a href="docs/js/iterable-enumerable.html">可迭代与可枚举</a></li>
@@ -47,7 +46,7 @@
     <li><a href="docs/js/issue-1.md">闭包</a></li>
     <li><a href="docs/js/issue-1.md">类型判断</a></li>
     <li><a href="docs/js/issue-1.md">原型链和继承</a></li>
-    <li><a href="docs/js/issue-1.md">隐式转换</a></li>
+    <li><a href="docs/js/issue-1.md">JS隐式转换</a></li>
     <li><a href="docs/js/issue-1.md">DOM常用操作</a></li>
     <li><a href="docs/js/issue-1.md">AJAX</a></li>
     <li><a href="docs/js/issue-1.md">事件委托</a></li>
@@ -60,8 +59,8 @@
     <li><a href="docs/js/issue-1.md">函数柯里化</a></li>
     <li><a href="docs/js/issue-9.md">用reduce实现map</a></li>
     <li><a href="docs/js/issue-2.md">实现一个从后台接口批量请求数据的异步方法request()</a></li>
-    <li><a href="docs/js/issue-19.md">模拟实现Promise.finally</a></li>
     <li><a href="docs/js/issue-10.md">使用Promise实现一个image同步加载的函数</a></li>
+    <li><a href="docs/js/issue-19.md">模拟实现Promise.finally</a></li>
     <li><a href="docs/js/issue-20.md">异步加载JavaScript文件函数loadscript</a></li>
     <li><a href="docs/js/issue-21.md">获取加载页面tagName的个数</a></li>
     <li><a href="docs/js/issue-16.md">为什么0.1 + 0.2 == 0.3为false，如何解决？</a></li>
@@ -111,10 +110,10 @@
     <li><a href="docs/http/issue-1.md">强缓存和协商缓存</a></li>
     <li><a href="docs/http/issue-1.md">TCP三次握手和四次挥手</a></li>
     <li><a href="docs/http/issue-1.md">GET和POST的区别</a></li>
-    <li><a href="docs/js/issue-5.md">cookie和session的区别</a></li>
-    <li><a href="docs/http/issue-1.md">HTTP1.0和2.0的区别</a></li>
-    <li><a href="docs/http/issue-1.md">HTTP和HTTPS的区别</a></li>
-    <li><a href="docs/http/issue-1.md">TCP和UDP的区别</a></li>
+    <li><a href="docs/js/issue-5.md">cookie，session和token</a></li>
+    <li><a href="docs/http/issue-1.md">HTTP1.0和HTTP2.0</a></li>
+    <li><a href="docs/http/issue-1.md">HTTP和HTTPS</a></li>
+    <li><a href="docs/http/issue-1.md">TCP和UDP</a></li>
     <li><a href="docs/http/issue-1.md">从输入URL到浏览器完成页面渲染都发生了什么</a></li>
   </ul>
 </div>
@@ -129,9 +128,9 @@
       </ul>
     </li>
     <li><a href="docs/http/issue-1.md">二分查找</a></li>
-    <li><a href="docs/js/issue-7.md">实现一个数的阶乘</a></li>
     <li><a href="docs/http/issue-1.md">数组去重</a></li>
     <li><a href="docs/http/issue-1.md">数组乱序</a></li>
+    <li><a href="docs/js/issue-7.md">实现一个数的阶乘</a></li>
     <li><a href="docs/http/issue-1.md">数组各种方法实现</a>
       <ul>
         <li><a href="docs/http/issue-1.md">flat</a></li>
