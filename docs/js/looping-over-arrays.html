@@ -62,6 +62,11 @@
         });
       </code>
     </pre>
+    <p>使用<code>forEach()</code>时要注意以下几点:</p>
+    <ul>
+      <li><code>forEach()</code>方法按升序为数组中含有有效值的每一项执行一次回调函数，<strong>已删除</strong>或者<strong>未初始化的项</strong>将被跳过（例如稀疏数组）。</li>
+      <li>除了抛出异常外，没有办法中止或跳出<code>forEach()</code>循环。</li>
+    </ul>
 
     <h3>for...of</h3>
     <p><code>for...of</code>语句在可迭代对象上创建一个迭代循环，并执行语句。对于数组，<code>for...of</code>常是最好的选择。</p>
