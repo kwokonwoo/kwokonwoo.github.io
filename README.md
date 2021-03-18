@@ -39,6 +39,7 @@
     <li><a href="docs/js/issue-14.md">轮播图实现</a></li>
     <li><a href="/docs/js/garbage-collection.html">垃圾回收机制</a></li>
     <li><a href="/docs/js/looping-over-arrays.html">数组遍历：for/for…in/forEach/for…of</a></li>
+    <li><a href="/docs/js/dom-json.html">实现DOM转化为JSON函数</a></li>
     <li><a href="docs/js/iterable-enumerable.html">可迭代与可枚举</a></li>
     <li><a href="docs/js/issue-0.md">浅拷贝和深拷贝</a></li>
     <li><a href="docs/js/issue-1.md">this</a></li>
