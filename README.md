@@ -174,6 +174,7 @@
 <div class="card">
   <h3 id="translation">Translation</h3>
   <ul>
+    <li><a href="docs/js/issue-2.md">探索ES6</a></li>
     <li><a href="docs/js/issue-2.md">JavaScript之继承——理解构造器属性</a></li>
     <li><a href="docs/js/issue-2.md">7个简单却棘手的JavaScript面试问题</a></li>
     <li><a href="docs/js/issue-2.md">Javascript声明函数的6种方法</a></li>
